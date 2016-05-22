@@ -3,12 +3,13 @@ Steam cvarlist (Source 2)
 
 Full list of console commands.
 
-You can create a new cvarlist file. 
-Just type in Dota 2 Reborn console: 
+<p>You can create a new cvarlist file.</p>
+<p>Just type in Dota 2 Reborn console:</p> 
 
 ```
 
 cvarlist log filename.txt
+
 ```
 
 Formats:
@@ -25,12 +26,13 @@ Update date:
 
 Полный список консольных команд, представленый в разных форматах.
 
-Вы можете создать обновленный список консольных команд. 
-Достаточно ввести в консоле Dota 2 Reborn следующее:
+<p>Вы можете создать обновленный список консольных команд.</p> 
+<p>Достаточно ввести в консоле Dota 2 Reborn следующее:</p>
 
 ```
 
 cvarlist log filename.txt
+
 ```
 
 Форматы:
