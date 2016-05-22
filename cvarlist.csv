@@ -1,4 +1,4 @@
-Name; Value; Type; Description
+Names; Value; Types; Descriptions
 @panoram_debug_dead_pad; 0; ; 
 @panorama_clear_frames_on_device_restore; 2; ; 
 @panorama_daisy_wheel; 0; cl; Daisy wheel input mode: RS | ABXY
@@ -417,7 +417,7 @@ cl_phys_block_fraction; 0; cl;
 cl_phys_create_agg_iters; 0; cl; 
 cl_phys_debug_callback_entities; 0; cl; Print all entities that get touch callbacks. Each entity is printed only once.
 cl_phys_dump_intersection_controller; cmd; ; Dump intersection controller status
-cl_phys_list; cmd; ; List all physics component contents of every entity in the game;     -allents: include non-physical entities     -classes: print class names     -sdk    : Rubikon build     -world  : current state of the world     -world -touch: list body pairs (bodies in contact)     -world -save <name>: save world to a file     -world -mem: memory dump     -world -snapshots: Start/Stop dumping snapshots of the world into the current directory     -world -profiletraces: ProfileRecordedTraces     -world -agg: current aggregate data registry (loaded resources) 
+cl_phys_list; cmd; ; List all physics component contents of every entity in the game,     -allents: include non-physical entities     -classes: print class names     -sdk    : Rubikon build     -world  : current state of the world     -world -touch: list body pairs (bodies in contact)     -world -save <name>: save world to a file     -world -mem: memory dump     -world -snapshots: Start/Stop dumping snapshots of the world into the current directory     -world -profiletraces: ProfileRecordedTraces     -world -agg: current aggregate data registry (loaded resources)
 cl_phys_rendergeo; cmd; ; Toggles client physics debug geometry
 cl_phys_sleep_enable; 1; cl, cheat; Enable sleeping for dynamic physics bodies.
 cl_phys_timescale; 1; cl; Scale time for physics
@@ -966,7 +966,7 @@ dota_custom_ui_debug_panel; cmd; ; Usage: dota_custom_ui_debug_panel <panel_type
 dota_cycle_prev_selected; cmd; ; 
 dota_cycle_selected; cmd; ; 
 dota_damage_flash; 1; sv, a; Flash when enemies take damage from the player
-dota_daynightcycle_pause; 0; sv, cheat; 0 = resume day/night cycle; 1 = pause day/night cycle; default = 0;
+dota_daynightcycle_pause; 0; sv, cheat; 0 = resume day/night cycle, 1 = pause day/night cycle, default = 0,
 dota_daynightcycle_toggle; cmd; ; Toggle the day-night cycle.
 dota_db_custom_download_debug; 0; cl; Test different custom game download states
 dota_dead_unit_delete_time; 1; sv, cheat; 
@@ -2906,8 +2906,8 @@ phys_dump_intersection_controller; cmd; ; Dump intersection controller status
 phys_dynamic_scaling; 1; sv, rep, cheat; 
 phys_hack_npc_shadow_collisions; 1; sv; 
 phys_impactforcescale; 1; sv; 
-phys_joint_hint; -1; cheat; -1: don't override; 0=RAGDOLL,1=SWINGTWIST,2=SWINGTWIST_SYM,3=MIXED,4=ORTHOTWIST,5=HEAPTWIST,6=CHEAPTWIST2
-phys_list; cmd; ; List all physics component contents of every entity in the game;     -allents: include non-physical entities     -classes: print class names     -sdk    : Rubikon build     -world  : current state of the world     -world -touch: list body pairs (bodies in contact)     -world -save <name>: save world to a file     -world -mem: memory dump     -world -snapshots: Start/Stop dumping snapshots of the world into the current directory     -world -profiletraces: ProfileRecordedTraces     -world -agg: current aggregate data registry (loaded resources) 
+phys_joint_hint; -1; cheat; -1: don't override, 0=RAGDOLL,1=SWINGTWIST,2=SWINGTWIST_SYM,3=MIXED,4=ORTHOTWIST,5=HEAPTWIST,6=CHEAPTWIST2
+phys_list; cmd; ; List all physics component contents of every entity in the game,     -allents: include non-physical entities     -classes: print class names     -sdk    : Rubikon build     -world  : current state of the world     -world -touch: list body pairs (bodies in contact)     -world -save <name>: save world to a file     -world -mem: memory dump     -world -snapshots: Start/Stop dumping snapshots of the world into the current directory     -world -profiletraces: ProfileRecordedTraces     -world -agg: current aggregate data registry (loaded resources)
 phys_log_updaters; 0; sv, rep; 
 phys_log_updaters_exclude; 0; sv, rep; 
 phys_log_updaters_include; 0; sv, rep; 
@@ -2916,7 +2916,7 @@ phys_pushscale; 1; sv, rep;
 phys_ragdoll_force_magnitude; 0; sv, rep; 
 phys_record_forces; 0; cheat; number of forces to record - for debugging only
 phys_record_traces; 0; cheat; number of traces to record results of - for debugging only
-phys_reload_immediately; 0; ; Set to 1 to reload resources and reconstruct physics of entities on the fly. May unexpectedly change behavior or crash the game, because game code is generally unaware of underlying resource reloads and may hold references to physics that may become invalid during resource reload. It is inherently harder for physics to deal with resource reloads because of persistent nature of objects being simulated (textures can be easily reloaded on the fly; if an entity holds a handle to a ragdoll body part, it may expect that handle to stay valid while the ragdoll exists)
+phys_reload_immediately; 0; ; Set to 1 to reload resources and reconstruct physics of entities on the fly. May unexpectedly change behavior or crash the game, because game code is generally unaware of underlying resource reloads and may hold references to physics that may become invalid during resource reload. It is inherently harder for physics to deal with resource reloads because of persistent nature of objects being simulated (textures can be easily reloaded on the fly, if an entity holds a handle to a ragdoll body part, it may expect that handle to stay valid while the ragdoll exists)
 phys_shoot; cmd; ; Shoots a phys object.
 phys_shoot_speed; 250; sv; 
 phys_shoot_torque; 100000000; sv; 
@@ -3786,7 +3786,7 @@ sv_dota_custom_game_cache_test_download; cmd; ; <custom game ID> [<expected_time
 sv_dota_dump_econ_item_stringtable; cmd; ; 
 sv_dota_dump_modifier_stringtable; cmd; ; 
 sv_dota_league_auto_save_interval; 30; sv; 
-sv_dota_speech_announcer_networking; 1; sv, cheat; Set to 0 to prevent announcer speech from being matched on the client; match it on the server instead, like the old way.
+sv_dota_speech_announcer_networking; 1; sv, cheat; Set to 0 to prevent announcer speech from being matched on the client, match it on the server instead, like the old way.
 sv_downloadurl; 0; rep, release; Location from which clients can download missing files
 sv_enable_delta_packing; 1; ; When enabled, this allows for entity packing to use the property changes for building up the data. This is many times faster, but can be disabled for error checking.
 sv_enableoldqueries; 0; ; Enable support for old style (HL1) server queries
