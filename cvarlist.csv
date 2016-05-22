@@ -1,4 +1,4 @@
-Names; Value; Types; Descriptions
+Name; Value; Type; Description
 @panoram_debug_dead_pad; 0; ; 
 @panorama_clear_frames_on_device_restore; 2; ; 
 @panorama_daisy_wheel; 0; cl; Daisy wheel input mode: RS | ABXY
